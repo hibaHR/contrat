@@ -511,6 +511,7 @@ class ComposerStaticInitd3b94cac39bed2955a52d236567c10cc
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\Role' => __DIR__ . '/../..' . '/app/Role.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
+        'App\\UserRole' => __DIR__ . '/../..' . '/app/UserRole.php',
         'Asm89\\Stack\\Cors' => __DIR__ . '/..' . '/asm89/stack-cors/src/Asm89/Stack/Cors.php',
         'Asm89\\Stack\\CorsService' => __DIR__ . '/..' . '/asm89/stack-cors/src/Asm89/Stack/CorsService.php',
         'Brick\\Math\\BigDecimal' => __DIR__ . '/..' . '/brick/math/src/BigDecimal.php',

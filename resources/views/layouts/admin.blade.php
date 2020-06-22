@@ -21,7 +21,6 @@
 			}
 		});
 	</script>
-
 	<!-- CSS Files -->
 	<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/atlantis.css') }}">
@@ -120,19 +119,32 @@
 								<p>Dashboard</p>
 							</a>
 						</li>
+						
 						<li class="nav-section">
 							<span class="sidebar-mini-icon">
 								<i class="fa fa-ellipsis-h"></i>
 							</span>
 							<h4 class="text-section">Components</h4>
 						</li>
+						@if(Auth::user()->hasRole('admin') )
 						<li class="nav-item">
 							<a data-toggle="collapse" href="#base">
 								<i class="fas fa-layer-group"></i>
-								<p>Base</p>
+								<p>Users</p>
 							</a>
-						</li>					
+						</li>	
+						@endif
+						@if(Auth::user()->hasRole('user'))	
+						<li class="nav-item">
+							<a data-toggle="collapse" href="#base">
+								<i class="fas fa-layer-group"></i>
+								<p>Contract</p>
+							</a>
+						</li>
+						@endif	
+										
 					</ul>
+					
 				</div>
 			</div>
 		</div>
@@ -142,7 +154,7 @@
 		<footer class="footer">
 			<div class="container-fluid">
 				<div class="copyright ml-auto">
-					2020, made with <i class="fa fa-heart heart text-danger"></i> by <a href="#">Company</a>
+					2020, made with <i class="fa fa-heart heart text-danger"></i> by <a href="#">Hannibal Make App</a>
 				</div>				
 			</div>
 		</footer>
