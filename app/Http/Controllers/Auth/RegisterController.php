@@ -73,7 +73,7 @@ class RegisterController extends Controller
 
         UserRole::create([
             'user_id' => $user->id,
-            'role_id' => 2
+            'role_id' => 1
         ]);
 
         return $user;

@@ -133,15 +133,25 @@
 								<p>Users</p>
 							</a>
 						</li>	
-						@endif
-						@if(Auth::user()->hasRole('user'))	
+
 						<li class="nav-item">
-							<a data-toggle="collapse" href="#base">
-								<i class="fas fa-layer-group"></i>
-								<p>Contract</p>
-							</a>
-						</li>
-						@endif	
+                            <a   class="nav-link" href="/home">
+                                <p>Contracts</p>
+                            </a>
+                        </li>
+						@endif
+						@if(Auth::user()->hasRole('user'))
+                        <li class="nav-item">
+                            <a   class="nav-link" href="/home">
+                                <p>Contracts</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a   class="nav-link" href="/home">
+                                <p>lists</p>
+                            </a>
+                        </li>
+                        @endif	
 										
 					</ul>
 					

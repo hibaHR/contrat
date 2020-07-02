@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFreelanceTable extends Migration
+class CreateFreelanceContractsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class CreateFreelanceTable extends Migration
      */
     public function up()
     {
-        Schema::create('freelance', function (Blueprint $table) {
-            $table->id();
+        Schema::create('freelance_contracts', function (Blueprint $table) {
+            $table->bigIncrements('id');
             $table->string('em_name');
             $table->string('ep_name');
             $table->date('from');
@@ -30,8 +30,6 @@ class CreateFreelanceTable extends Migration
             $table->integer('fixed_period_of')->nullable()->default('0');
             $table->boolean('break_partie')->nullable()->default(false);
             $table->timestamps();
-            
-
         });
     }
 
@@ -42,6 +40,6 @@ class CreateFreelanceTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('freelance');
+        Schema::dropIfExists('freelance_contracts');
     }
 }

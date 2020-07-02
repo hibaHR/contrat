@@ -19,5 +19,7 @@ Route::get('/', function () {
 
 Auth::routes(); 
 
-Route::get('/home', 'HomeController@index')->name('home');
-
+Route::get('freelanceContract','FreelanceContractController@create')->name('freelanceContract.create');
+Route::post('freelanceContract','FreelanceContractController@store')->name('freelancecontract.store');
+Route::get('freelanceContract/list', 'FreelanceContractController@index')->name('freelancecontract.index');
+Route::get('freelanceContract/downloadPDF/{id}','FreelanceContractController@downloadPDF');
