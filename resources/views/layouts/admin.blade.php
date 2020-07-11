@@ -126,7 +126,17 @@
 							</span>
 							<h4 class="text-section">Components</h4>
 						</li>
+
 						@if(Auth::user()->hasRole('admin') )
+						<li class="nav-section">
+							<span class="sidebar-mini-icon">
+								<i class="fa fa-ellipsis-h"></i>
+							</span>
+							<a href="{{route('contract.index')}}">Contract List</a>
+						</li>
+						@endif
+
+						 @if(Auth::user()->hasRole('admin') )
 						<li class="nav-item">
 							<a data-toggle="collapse" href="#base">
 								<i class="fas fa-layer-group"></i>
@@ -140,7 +150,7 @@
                             </a>
                         </li>
 						@endif
-						@if(Auth::user()->hasRole('user'))
+						<!--@if(Auth::user()->hasRole('user'))-->
                         <li class="nav-item">
                             <a   class="nav-link" href="/home">
                                 <p>Contracts</p>
@@ -151,7 +161,7 @@
                                 <p>lists</p>
                             </a>
                         </li>
-                        @endif	
+                       <!-- @endif	-->
 										
 					</ul>
 					

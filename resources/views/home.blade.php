@@ -11,7 +11,7 @@
       <td></td>
       <td></td>
       <td></td>
-      <td><a href="freelanceContract" class="badge badge-pill secondary" color="F9F8F9">create</td>
+      <td><a href="{{route('freelance.contract')}}" class="badge badge-pill secondary" color="F9F8F9">create</td>
     </tr>
   </tbody>
 </table>
