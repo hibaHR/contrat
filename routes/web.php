@@ -36,3 +36,7 @@ Route::get('contract', 'ContractController@getIndex')->name('contract.index');
 
 Route::get('contract/new', 'ContractController@getNewcontract')->name('contract.new');
 Route::post('contract/new', 'ContractController@postContract')->name('contract.post');
+//fields route 
+
+Route::get('dynamic-field', 'DynamicFieldController@index');
+Route::post('dynamic-field/insert', 'DynamicFieldController@insert')->name('dynamic-field.insert');

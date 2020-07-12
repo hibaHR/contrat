@@ -9,7 +9,7 @@ class TableController extends Controller
     public function operate()
     {
         // set dynamic table name according to your requirements
-        $table_name = 'contrat';
+        $table_name = 'Contrat de travail';
         // set your dynamic fields (you can fetch this data from database this is just an example)
         $fields = [
             ['name' => 'field_1', 'type' => 'string'],
