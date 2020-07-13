@@ -26,6 +26,7 @@ class ContractController extends Controller
     {
         $contract = new Testcontract;
             $contract->name = $request->name;
+            $contract->title = $request->title;
         $contract->save();
         
         return redirect()->route('contract.index');

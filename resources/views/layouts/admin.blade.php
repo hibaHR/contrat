@@ -70,7 +70,7 @@
 											<div class="avatar-lg"><img src="https://themekita.com/demo-atlantis-bootstrap/livepreview/examples/assets/img/profile.jpg" alt="image profile" class="avatar-img rounded"></div>
 											<div class="u-text">
 												<h4>{{ Auth::user()->name }}</h4>
-												<p class="text-muted">{{ Auth::user()->email }}</p>
+												<p class="text-muted">{{ Auth::user()->email}}</p>
 											</div>
 										</div>
 									</li>
