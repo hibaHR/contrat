@@ -6,12 +6,11 @@
   </thead>
   <tbody>
     <tr>
-      <th scope="row">Freelance Contract</th>
+      <th scope="row"></th>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td><a href="{{route('freelance.contract')}}" class="badge badge-pill secondary" color="F9F8F9">create</td>
     </tr>
   </tbody>
 </table>

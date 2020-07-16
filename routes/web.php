@@ -36,7 +36,17 @@ Route::get('contract', 'ContractController@getIndex')->name('contract.index');
 
 Route::get('contract/new', 'ContractController@getNewcontract')->name('contract.new');
 Route::post('contract/new', 'ContractController@postContract')->name('contract.post');
+
+
 //fields route 
 
 Route::get('dynamic-field', 'DynamicFieldController@index');
 Route::post('dynamic-field/insert', 'DynamicFieldController@insert')->name('dynamic-field.insert');
+
+
+
+Route::get('/role-register','Admin\DashboardController@registered');
+Route::get('/role-edit/{id}','Admin\DashboardController@registeredit');
+Route::get('/role-show/{id}','Admin\DashboardController@registershow');
+Route::put('/role-register-update/{id}','Admin\DashboardController@registerupdate');
+Route::delete('/role-delete/{id}','Admin\DashboardController@registerdelete');

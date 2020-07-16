@@ -138,7 +138,8 @@
 
 						 @if(Auth::user()->hasRole('admin') )
 						<li class="nav-item">
-							<a data-toggle="collapse" href="#base">
+							<a href="/role-register" class="nav-link">
+
 								<i class="fas fa-layer-group"></i>
 								<p>Users</p>
 							</a>
@@ -150,14 +151,14 @@
                             </a>
                         </li>
 						@endif
-						<!--@if(Auth::user()->hasRole('user'))-->
+						@if(Auth::user()->hasRole('user'))
                         <li class="nav-item">
                             <a   class="nav-link" href="/home">
                                 <p>Contracts</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a   class="nav-link" href="/home">
+                            <a href="/freelanceContract/list" class="nav-link">
                                 <p>lists</p>
                             </a>
                         </li>
