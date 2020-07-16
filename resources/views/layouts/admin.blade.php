@@ -146,6 +146,16 @@
 							</a>
 						</li>
 						@endif
+
+						@if(Auth::user()->hasRole('admin'))
+						<li class="nav-item">
+							<a href="{{route('freelancecontract.index')}}" class="nav-link">
+
+								<i class="fas fa-layer-group"></i>
+								<p>Freelances</p>
+							</a>
+						</li>
+						@endif
 						
 						@if(Auth::user()->hasRole('user'))
                         <li class="nav-item">

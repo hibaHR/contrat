@@ -3,8 +3,9 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\FreelanceContract;
-use PDF;
+use \PDF;
 use Auth;
+
 class freelanceContractController extends Controller
 {
     public function  __construct() {
@@ -12,8 +13,8 @@ class freelanceContractController extends Controller
   }
   public function index()
   {
-          $freelanceContracts = freelanceContract::where('user_id', Auth::user()->id)->get();
-          return view('liste_freelanceContract', compact('freelanceContracts'));
+          $freelanceContracts = freelanceContract::all();
+          return view('freelances.liste_freelanceContract', compact('freelanceContracts'));
   }
     //
     public function create(){
@@ -41,7 +42,7 @@ class freelanceContractController extends Controller
     }
 public function downloadPDF($id) {
     $contract = freelanceContract::find($id);
-    $pdf = PDF::loadView('freelancepdf', compact('contract'));
+    $pdf = PDF::loadView('freelances.freelancepdf', compact('contract'));
     return $pdf->download('contract_freelance_'.$id.'.pdf');
 }
 }
