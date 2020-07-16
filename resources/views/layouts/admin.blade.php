@@ -127,30 +127,26 @@
 							<h4 class="text-section">Components</h4>
 						</li>
 
-						@if(Auth::user()->hasRole('admin') )
-						<li class="nav-section">
-							<span class="sidebar-mini-icon">
-								<i class="fa fa-ellipsis-h"></i>
-							</span>
-							<a href="{{route('contract.index')}}">Contract List</a>
-						</li>
-						@endif
-
-						 @if(Auth::user()->hasRole('admin') )
+						@if(Auth::user()->hasRole('admin'))
 						<li class="nav-item">
 							<a href="/role-register" class="nav-link">
 
 								<i class="fas fa-layer-group"></i>
 								<p>Users</p>
 							</a>
-						</li>	
-
-						<li class="nav-item">
-                            <a   class="nav-link" href="/home">
-                                <p>Contracts</p>
-                            </a>
-                        </li>
+						</li>
 						@endif
+
+						@if(Auth::user()->hasRole('admin'))
+						<li class="nav-item">
+							<a href="{{route('contract.index')}}" class="nav-link">
+
+								<i class="fas fa-layer-group"></i>
+								<p>Contracts</p>
+							</a>
+						</li>
+						@endif
+						
 						@if(Auth::user()->hasRole('user'))
                         <li class="nav-item">
                             <a   class="nav-link" href="/home">

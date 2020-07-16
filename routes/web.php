@@ -35,7 +35,7 @@ Route::get('/freelance-contract', 'FreelanceController@getIndex')->name('freelan
 Route::get('contract', 'ContractController@getIndex')->name('contract.index');
 
 Route::get('contract/new', 'ContractController@getNewcontract')->name('contract.new');
-Route::post('contract/new', 'ContractController@postContract')->name('contract.post');
+Route::post('contract/new', 'ContractController@operate')->name('contract.post');
 
 
 //fields route 

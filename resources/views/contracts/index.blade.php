@@ -11,9 +11,5 @@
         Add New Contract
     </a>
         <h1>Contract List</h1>
-        @foreach($contracts as $contract)
-            {{$contract->name}}
-            <br>
-        @endforeach
     </div>
 @stop
